@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brick Avatars — Deterministic LEGO-Style Avatar Generator",
+  title: "Brick Avatars",
   description:
-    "Generate deterministic LEGO-style avatars from any string seed. SVG-first, zero dependencies, 450+ combinations.",
+    "Deterministic LEGO-style avatar generator. Same seed, same face — always. SVG-first, zero dependencies, 450+ combinations.",
 };
 
 export default function RootLayout({
