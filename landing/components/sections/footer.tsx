@@ -15,7 +15,7 @@ export function FooterSection() {
           <nav className="flex gap-4 flex-wrap">
             {[
               {
-                href: "https://github.com/ahmedabouelleil/brick-avatars",
+                href: "https://github.com/AhmedFr/brick-avatars",
                 label: "GitHub",
               },
               {
