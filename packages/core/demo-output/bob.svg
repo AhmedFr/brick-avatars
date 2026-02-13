@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 128 128">
+<rect width="128" height="128" fill="#FFFFFF" rx="12"/>
+<g id="head-glossy">
+    <rect x="40" y="99" width="48" height="14" fill="#f9de4e"/>
+    <rect x="19" y="21" width="90" height="76" rx="18" fill="#f9de4e"/>
+    <path d="M 48 19 L 48 10 Q 48 6 52 6 L 76 6 Q 80 6 80 10 L 80 19 Z" fill="#f9de4e"/>
+    <ellipse cx="54" cy="36" rx="14" ry="7" fill="white" opacity="0.12"/>
+  </g>
+<g id="eyebrows-thin-flat">
+    <line x1="38" y1="45" x2="54" y2="45" stroke="#C47A2B" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="74" y1="45" x2="90" y2="45" stroke="#C47A2B" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+<g id="eyes-wide">
+    <circle cx="46" cy="55" r="6.5" fill="#1a1a1a"/>
+    <circle cx="82" cy="55" r="6.5" fill="#1a1a1a"/>
+  </g>
+<g id="mouth-classic-smile">
+    <path d="M 50 74 Q 64 83 78 74" fill="none" stroke="#1a1a1a"
+          stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

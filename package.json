@@ -1,0 +1,12 @@
+{
+  "name": "brick-avatars",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

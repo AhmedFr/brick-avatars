@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__acp__Write",
+      "mcp__acp__Bash",
+      "WebFetch(domain:brickset.com)",
+      "WebFetch(domain:bricknerd.com)",
+      "WebFetch(domain:freesvg.org)",
+      "WebFetch(domain:github.com)",
+      "mcp__acp__Edit"
+    ]
+  }
+}
