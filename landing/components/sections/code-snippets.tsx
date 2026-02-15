@@ -29,39 +29,39 @@ const custom = generateAvatar({
   palette: { hair: "#3B82F6", accent: "#EF4444" },
 });`,
   },
-  {
-    id: "cli",
-    label: "CLI",
-    filename: "terminal",
-    code: `# Generate and save an SVG file
-npx brick-avatar --seed "ahmed" --out avatar.svg
+  //   {
+  //     id: "cli",
+  //     label: "CLI",
+  //     filename: "terminal",
+  //     code: `# Generate and save an SVG file
+  // npx brick-avatar --seed "ahmed" --out avatar.svg
 
-# Pipe SVG to stdout
-npx brick-avatar --seed "ahmed"
+  // # Pipe SVG to stdout
+  // npx brick-avatar --seed "ahmed"
 
-# Custom output size
-npx brick-avatar --seed "ahmed" --size 256 --out large.svg
+  // # Custom output size
+  // npx brick-avatar --seed "ahmed" --size 256 --out large.svg
 
-# Show help
-npx brick-avatar --help`,
-  },
-  {
-    id: "http",
-    label: "HTTP API",
-    filename: "curl",
-    code: `# SVG response
-curl http://localhost:3000/avatar/ahmed.svg
+  // # Show help
+  // npx brick-avatar --help`,
+  //   },
+  //   {
+  //     id: "http",
+  //     label: "HTTP API",
+  //     filename: "curl",
+  //     code: `# SVG response
+  // curl http://localhost:3000/avatar/ahmed.svg
 
-# PNG response (server-rendered via resvg)
-curl http://localhost:3000/avatar/ahmed.png -o avatar.png
+  // # PNG response (server-rendered via resvg)
+  // curl http://localhost:3000/avatar/ahmed.png -o avatar.png
 
-# Custom size via query param
-curl http://localhost:3000/avatar/ahmed.svg?size=256
+  // # Custom size via query param
+  // curl http://localhost:3000/avatar/ahmed.svg?size=256
 
-# Start the API server
-cd packages/api && pnpm start
-# => brick-avatars API listening on http://localhost:3000`,
-  },
+  // # Start the API server
+  // cd packages/api && pnpm start
+  // # => brick-avatars API listening on http://localhost:3000`,
+  //   },
 ] as const;
 
 type TabId = (typeof TABS)[number]["id"];
@@ -89,7 +89,7 @@ export function CodeSnippetsSection() {
                 i < TABS.length - 1 && "border-r border-border",
                 activeTab === t.id
                   ? "bg-primary text-primary-foreground"
-                  : "bg-background text-muted-foreground hover:bg-muted hover:text-foreground"
+                  : "bg-background text-muted-foreground hover:bg-muted hover:text-foreground",
               )}
             >
               {t.label}
