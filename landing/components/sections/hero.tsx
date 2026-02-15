@@ -33,7 +33,7 @@ export function HeroSection() {
           </h1>
           <p className="text-base text-muted-foreground max-w-md mb-8 leading-relaxed">
             Deterministic LEGO-style avatar generator. Same seed, same face
-            &mdash; always. 450+ combinations, SVG-first, zero dependencies.
+            &mdash; always. 450+ combinations, SVG-first.
           </p>
 
           <div className="flex items-center gap-0 mb-6 ring-1 ring-border bg-muted w-fit">
@@ -74,9 +74,7 @@ export function HeroSection() {
 
           <div className="flex gap-8 mt-10 pt-6 border-t border-border flex-wrap">
             <Stat value="450+" label="Combinations" />
-            <Stat value="0" label="Dependencies" />
             <Stat value="128px" label="SVG base" />
-            <Stat value="<1ms" label="Generation" />
           </div>
         </div>
 
