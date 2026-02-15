@@ -13,3 +13,4 @@ export type {
 export { defaultRegistry } from "./components/index.js";
 export { composeSvg } from "./composer.js";
 export { selectSlots, derivePalette } from "./prng.js";
+export { renderIconic, getIconicNames } from "./iconic.js";

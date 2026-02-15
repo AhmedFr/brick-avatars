@@ -29,6 +29,8 @@ export interface ColorPalette {
 export interface ComponentContext {
   palette: ColorPalette;
   size: number;
+  /** Slot selections — allows components to adapt based on what else is active. */
+  selections: SlotSelections;
 }
 
 export type ComponentFn = (ctx: ComponentContext) => string;

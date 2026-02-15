@@ -21,12 +21,13 @@ export function composeSvg(options: ComposerOptions): string {
   const ctx: ComponentContext = {
     palette,
     size: VIEWBOX,
+    selections,
   };
 
   const layers: string[] = [];
 
   layers.push(
-    `<rect width="${VIEWBOX}" height="${VIEWBOX}" fill="${palette.background}" rx="12"/>`
+    `<rect width="${VIEWBOX}" height="${VIEWBOX}" fill="${palette.background}" rx="12"/>`,
   );
 
   for (const slotName of SLOT_RENDER_ORDER) {
