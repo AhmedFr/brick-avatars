@@ -7,9 +7,9 @@ export function FooterSection() {
             <span className="text-sm font-bold text-foreground">
               Brick Avatars
             </span>
-            <span className="text-xs text-muted-foreground">
+            {/*<span className="text-xs text-muted-foreground">
               MIT License &mdash; Free and open source
-            </span>
+            </span>*/}
           </div>
 
           <nav className="flex gap-4 flex-wrap">
@@ -22,8 +22,8 @@ export function FooterSection() {
                 href: "https://npmjs.com/package/@brick-avatars/core",
                 label: "npm",
               },
-              { href: "#playground", label: "Playground" },
-              { href: "#features", label: "Features" },
+              // { href: "#playground", label: "Playground" },
+              // { href: "#features", label: "Features" },
             ].map(({ href, label }) => (
               <a
                 key={label}
