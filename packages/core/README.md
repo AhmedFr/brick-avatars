@@ -1,6 +1,6 @@
-![heads](./packages/core/hero.png)
+![heads](./hero.png)
 
-![heads](./packages/core/heads.png)
+![heads](./heads.png)
 
 ## Features
 
