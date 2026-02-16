@@ -1,8 +1,8 @@
-import { getHeroAvatars } from "@/lib/avatars";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/ui/copy-button";
-import { Github, ExternalLink } from "lucide-react";
+import { getHeroAvatars } from "@/lib/avatars";
+import { ExternalLink, Github } from "lucide-react";
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
@@ -32,8 +32,7 @@ export function HeroSection() {
             <span className="text-primary block">Avatars</span>
           </h1>
           <p className="text-base text-muted-foreground max-w-md mb-8 leading-relaxed">
-            Deterministic LEGO-style avatar generator. Same seed, same face
-            &mdash; always. 450+ combinations, SVG-first.
+            Deterministic LEGO-style avatar generator. Same seed, same face. 450+ combinations, SVG-first.
           </p>
 
           <div className="flex items-center gap-0 mb-6 ring-1 ring-border bg-muted w-fit">
@@ -93,7 +92,7 @@ export function HeroSection() {
             ))}
           </div>
           <p className="text-xs text-muted-foreground text-center mt-3">
-            12 avatars &mdash; each generated from a unique string seed
+            12 avatars each generated from a unique string seed
           </p>
         </div>
       </div>

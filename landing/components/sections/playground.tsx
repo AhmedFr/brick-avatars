@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useMemo, useDeferredValue } from "react";
-import { generateAvatar } from "@brick-avatars/core";
-import type { SlotName } from "@brick-avatars/core";
+import { SectionHeader } from "@/components/section-header";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { SectionHeader } from "@/components/section-header";
-import { Shuffle, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { SlotName } from "@brick-avatars/core";
+import { generateAvatar } from "@brick-avatars/core";
+import { Download, Shuffle } from "lucide-react";
+import { useDeferredValue, useMemo, useState } from "react";
 
 const PRESET_SEEDS = [
   "alice",
@@ -71,7 +71,7 @@ export function PlaygroundSection() {
         <SectionHeader
           badge="Interactive"
           title="Try It Live"
-          description="Type any string — a name, email, or ID — and get a deterministic avatar instantly."
+          description="Type any string, name, email, or ID and get a deterministic avatar instantly."
         />
 
         <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 mt-12 items-start">
