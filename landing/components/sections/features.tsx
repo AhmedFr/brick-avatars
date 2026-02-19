@@ -1,7 +1,7 @@
-import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/section-header";
-import { Lock, Code2, Zap, Layers, Sparkles, Globe } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import type { LucideIcon } from "lucide-react";
+import { Code2, Globe, Layers, Lock, Sparkles, Zap } from "lucide-react";
 
 interface Feature {
   Icon: LucideIcon;
@@ -44,14 +44,14 @@ const FEATURES: Feature[] = [
     badge: "Variety",
     title: "Hundreds of combinations",
     description:
-      "3 eyes \u00D7 7 mouths \u00D7 3 hair colors, plus optional hair, facial hair, glasses, and freckles. Every combination feels distinct and recognizable.",
+      "Sets of eyes, mouths, hair, facial hair, glasses, and freckles. Every combination feels distinct and recognizable.",
   },
   {
     Icon: Globe,
     badge: "Runtime",
     title: "Truly Isomorphic",
     description:
-      "One API across all JS runtimes. Import in the browser, run in a Worker, call from a CLI, or integrate into an HTTP API — identical output everywhere.",
+      "One API across all JS runtimes. Import in the browser, run in a Worker, call from a CLI, or integrate into an HTTP API — identical output everywhere. (Soon)",
   },
 ];
 

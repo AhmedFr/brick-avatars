@@ -32,7 +32,7 @@ export function HeroSection() {
             <span className="text-primary block">Avatars</span>
           </h1>
           <p className="text-base text-muted-foreground max-w-md mb-8 leading-relaxed">
-            Deterministic LEGO-style avatar generator. Same seed, same face. 450+ combinations, SVG-first.
+            Deterministic LEGO-style avatar generator. Same seed, same face. 1k+ combinations, SVG-first.
           </p>
 
           <div className="flex items-center gap-0 mb-6 ring-1 ring-border bg-muted w-fit">
