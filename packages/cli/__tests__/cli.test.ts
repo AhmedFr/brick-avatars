@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { run } from "../src/cli.js";
 
 describe("--help / --version", () => {
@@ -38,7 +38,7 @@ describe("--help / --version", () => {
       });
     expect(() => run(["--version"])).toThrow("exit");
     expect(exit).toHaveBeenCalledWith(0);
-    expect(out).toHaveBeenCalledWith(expect.stringContaining("0.1.0"));
+    expect(out).toHaveBeenCalledWith(expect.stringContaining("0.2.0"));
   });
 
   it("-v is alias for --version", () => {

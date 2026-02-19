@@ -25,7 +25,7 @@ That's it.
 
 ### Control the output size
 
-The default size is 128px. Pass `size` to change the pixel dimensions — the internal 128x128 viewBox scales automatically.
+The default size is 256px. Pass `size` to change the pixel dimensions — the internal 128x128 viewBox scales automatically.
 
 ```ts
 // Thumbnail

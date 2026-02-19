@@ -1,6 +1,6 @@
 {
   "name": "@brick-avatars/api",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "HTTP API for brick-avatar generation (SVG + PNG)",
   "type": "module",
   "main": "./dist/app.cjs",

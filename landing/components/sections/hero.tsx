@@ -25,7 +25,7 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto px-6 py-20 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <Badge variant="outline" className="mb-5">
-            v0.1.0
+            v0.2.0
           </Badge>
           <h1 className="text-5xl lg:text-7xl font-black tracking-tight leading-none mb-6">
             Brick
@@ -72,8 +72,8 @@ export function HeroSection() {
           </div>
 
           <div className="flex gap-8 mt-10 pt-6 border-t border-border flex-wrap">
-            <Stat value="450+" label="Combinations" />
-            <Stat value="128px" label="SVG base" />
+            <Stat value="1k+" label="Combinations" />
+            <Stat value="256" label="SVG base" />
           </div>
         </div>
 
