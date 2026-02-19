@@ -34,6 +34,57 @@ const goatee: ComponentFn = (ctx) => {
   return wrap(ctx, 21, 60, inner);
 };
 
+const stubble: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<circle cx="15" cy="8" r="1.5" fill="${c}"/><circle cx="28" cy="12" r="1.5" fill="${c}"/><circle cx="42" cy="10" r="1.5" fill="${c}"/>
+<circle cx="55" cy="8" r="1.5" fill="${c}"/><circle cx="22" cy="18" r="1.5" fill="${c}"/><circle cx="38" cy="20" r="1.5" fill="${c}"/><circle cx="48" cy="16" r="1.5" fill="${c}"/>`;
+  return wrap(ctx, 70, 25, inner);
+};
+
+const fullBeard: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<path d="M8 0L12 28L28 35L42 28L48 0Z" fill="${c}" stroke="${c}" stroke-width="0.280605"/>
+<path d="M52 0L56 28L72 35L88 28L92 0Z" fill="${c}" stroke="${c}" stroke-width="0.280605"/>
+<path d="M28 35L42 35L42 42L28 42Z" fill="${c}" stroke="${c}" stroke-width="0.280605"/>`;
+  return wrap(ctx, 100, 43, inner);
+};
+
+const soulPatch: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<path d="M42 0V18H38V0H42Z" fill="${c}" stroke="${c}" stroke-width="0.280605"/>
+<rect x="38" y="14" width="8" height="6" fill="${c}"/>`;
+  return wrap(ctx, 94, 22, inner);
+};
+
+const sideburns: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<rect x="0" y="0" width="12" height="45" fill="${c}" stroke="${c}" stroke-width="0.280605"/>
+<rect x="82" y="0" width="12" height="45" fill="${c}" stroke="${c}" stroke-width="0.280605"/>`;
+  return wrap(ctx, 94, 46, inner);
+};
+
+const thinMoustache: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<path d="M25 10L0 12L25 14" fill="none" stroke="${c}" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M51 10L76 12L51 14" fill="none" stroke="${c}" stroke-width="1.5" stroke-linecap="round"/>`;
+  return wrap(ctx, 76, 15, inner);
+};
+
+const muttonChops: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<path d="M0 5L8 5L12 35L4 38L0 5Z" fill="${c}" stroke="${c}" stroke-width="0.280605"/>
+<path d="M94 5L86 5L82 35L90 38L94 5Z" fill="${c}" stroke="${c}" stroke-width="0.280605"/>`;
+  return wrap(ctx, 94, 40, inner);
+};
+
+const chinStrap: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<path d="M15 0L12 25L25 32L38 25L42 0" fill="none" stroke="${c}" stroke-width="2.5"/>
+<path d="M52 0L56 25L72 32L88 25L92 0" fill="none" stroke="${c}" stroke-width="2.5"/>
+<path d="M25 32L38 32L38 38L25 38Z" fill="${c}" stroke="${c}" stroke-width="0.280605"/>`;
+  return wrap(ctx, 92, 40, inner);
+};
+
 export const facialHairVariants: ComponentSet = [
   moustache,
   moustache2,

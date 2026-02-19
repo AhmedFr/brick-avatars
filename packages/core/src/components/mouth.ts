@@ -47,6 +47,21 @@ const smileTeeth: ComponentFn = (ctx) => {
   return wrap(ctx, 70, 25, inner);
 };
 
+const frown: ComponentFn = (ctx) => {
+  const inner = `<path d="M3.30249 22.6975C22.8281 12.3366 33.7772 11.7294 53.3025 22.6975" fill="none" stroke="black" stroke-width="6.60377" stroke-linecap="round"/>`;
+  return wrap(ctx, 57, 26, inner);
+};
+
+const openO: ComponentFn = (ctx) => {
+  const inner = `<ellipse cx="28" cy="12" rx="18" ry="10" fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>`;
+  return wrap(ctx, 56, 24, inner);
+};
+
+const zigzag: ComponentFn = (ctx) => {
+  const inner = `<path d="M5 8L20 2L35 14L50 4L58 10" fill="none" stroke="black" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  return wrap(ctx, 63, 16, inner);
+};
+
 export const mouthVariants: ComponentSet = [
   classicSmile,
   mouth,
@@ -55,4 +70,7 @@ export const mouthVariants: ComponentSet = [
   chockedTeeth,
   smirk,
   smileTeeth,
+  frown,
+  openO,
+  zigzag,
 ];

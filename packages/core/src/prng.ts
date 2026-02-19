@@ -41,7 +41,18 @@ export function selectSlots(
 
 const SKIN_TONES = ["#FFDD15"];
 
-const HAIR_COLORS = ["#000000", "#FF0009", "#844D26"];
+const HAIR_COLORS = [
+  "#000000",
+  "#FF0009",
+  "#844D26",
+  "#C4A574",
+  "#E8D5B7",
+  "#4A3728",
+  "#6B4423",
+  "#9CA3AF",
+  "#1E3A5F",
+  "#5B21B6",
+];
 
 const ACCENT_COLORS = [
   "#EF4444",

@@ -38,10 +38,27 @@ const longStyled: ComponentFn = (ctx) => {
   return wrap(ctx, 181, 137, inner);
 };
 
+const shortBack: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<path d="M165 0.2H20C8 0.2 12 28 28 38C45 48 80 42 92 32C100 26 110 32 125 28C140 24 155 12 165 0.2Z" fill="${c}" stroke="${c}" stroke-width="0.410161"/>`;
+  return wrap(ctx, 185, 40, inner);
+};
+
+
+const curlyTop: ComponentFn = (ctx) => {
+  const c = ctx.palette.hair;
+  const inner = `<path d="M155 0.2H30C10 5 15 35 40 42C65 49 95 42 115 35C135 28 150 12 155 0.2Z" fill="${c}" stroke="${c}" stroke-width="0.410161"/>
+<path d="M75 8C78 18 85 25 92 22C99 19 102 10 99 5C96 0 88 2 82 8C76 14 72 0 75 8Z" fill="${c}" stroke="${c}" stroke-width="0.410161"/>`;
+  return wrap(ctx, 185, 45, inner);
+};
+
+
 export const hairVariants: ComponentSet = [
   basic,
   spiky,
   bubbly,
   long,
   longStyled,
+  shortBack,
+  curlyTop,
 ];

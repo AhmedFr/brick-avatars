@@ -14,6 +14,7 @@ export function FooterSection() {
 
           <nav className="flex gap-4 flex-wrap">
             {[
+              { href: "/parts", label: "Parts" },
               {
                 href: "https://github.com/AhmedFr/brick-avatars",
                 label: "GitHub",
@@ -22,8 +23,6 @@ export function FooterSection() {
                 href: "https://npmjs.com/package/@brick-avatars/core",
                 label: "npm",
               },
-              // { href: "#playground", label: "Playground" },
-              // { href: "#features", label: "Features" },
             ].map(({ href, label }) => (
               <a
                 key={label}
