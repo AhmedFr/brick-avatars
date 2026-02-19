@@ -44,7 +44,7 @@ describe("composeSvg", () => {
 
     expect(svg).toContain('width="256"');
     expect(svg).toContain('height="256"');
-    expect(svg).toContain('viewBox="0 0 128 128"');
+    expect(svg).toContain('viewBox="0 0 256 256"');
   });
 
   it("skips disabled slots", () => {

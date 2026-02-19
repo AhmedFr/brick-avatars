@@ -20,7 +20,7 @@ for (const seed of seeds) {
   const { svg, selections, palette } = generateAvatar({ seed, size: 256 });
   writeFileSync(`demo-output/${seed}.svg`, svg);
   console.log(
-    `${seed}: head=${selections.head.variantIndex} eyes=${selections.eyes.variantIndex} mouth=${selections.mouth.variantIndex} skin=${palette.skin}`,
+    `${seed}: eyes=${selections.eyes.variantIndex} mouth=${selections.mouth.variantIndex} skin=${palette.skin}`,
   );
 }
 

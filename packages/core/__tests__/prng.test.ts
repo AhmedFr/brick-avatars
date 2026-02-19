@@ -5,7 +5,7 @@ import { defaultRegistry } from "../src/components/index.js";
 describe("selectSlots", () => {
   it("returns selections for all slots", () => {
     const sel = selectSlots("test-seed", defaultRegistry);
-    expect(Object.keys(sel)).toHaveLength(8);
+    expect(Object.keys(sel)).toHaveLength(6);
   });
 
   it("is deterministic", () => {
@@ -22,10 +22,8 @@ describe("selectSlots", () => {
 
   it("required slots are always enabled", () => {
     const sel = selectSlots("any-seed", defaultRegistry);
-    expect(sel.head.enabled).toBe(true);
     expect(sel.eyes.enabled).toBe(true);
     expect(sel.mouth.enabled).toBe(true);
-    expect(sel.eyebrows.enabled).toBe(true);
   });
 
   it("variant indices are within bounds", () => {

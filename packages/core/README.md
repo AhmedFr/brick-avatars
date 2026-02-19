@@ -5,8 +5,8 @@
 ## Features
 
 - **Deterministic** — same seed always produces the same avatar. No randomness at render time — perfect for user profiles, consistent IDs, and reproducible tests.
-- **SVG-first** — pure SVG output with a 128×128 viewBox. Scales to any resolution with zero pixelation. Embed inline, use in an `<img>`, or serve as a file.
-- **Modular slots** — head, eyes, eyebrows, mouth — each slot is independently hashed. Adding new variants never changes existing avatars. Extend with your own components.
+- **SVG-first** — pure SVG output with a 256×256 viewBox. Scales to any resolution with zero pixelation. Embed inline, use in an `<img>`, or serve as a file.
+- **Modular slots** — eyes and mouth always on; optional hair, facial hair, glasses, and freckles. Each slot is independently hashed. Adding new variants never changes existing avatars. Extend with your own components.
 
 ## Quick Start
 
@@ -25,7 +25,7 @@ That's it.
 
 ### Control the output size
 
-The default size is 128px. Pass `size` to change the pixel dimensions — the internal 128x128 viewBox scales automatically.
+The default size is 256px. Pass `size` to change the pixel dimensions — the internal 256×256 viewBox scales automatically.
 
 ```ts
 // Thumbnail

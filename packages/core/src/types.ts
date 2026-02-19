@@ -1,22 +1,18 @@
 export type SlotName =
-  | "head"
   | "eyes"
-  | "eyebrows"
   | "mouth"
   | "facialHair"
   | "glasses"
-  | "headAccessory"
-  | "scarsMarks";
+  | "hair"
+  | "freckles";
 
 export const SLOT_RENDER_ORDER: SlotName[] = [
-  "head",
-  "scarsMarks",
-  "eyebrows",
   "eyes",
   "mouth",
   "facialHair",
+  "freckles",
   "glasses",
-  "headAccessory",
+  "hair",
 ];
 
 export interface ColorPalette {
@@ -31,6 +27,8 @@ export interface ComponentContext {
   size: number;
   /** Slot selections — allows components to adapt based on what else is active. */
   selections: SlotSelections;
+  /** Position (center x, top y) for the current slot in 256 space. Set by composer. */
+  slotPosition?: { x: number; y: number };
 }
 
 export type ComponentFn = (ctx: ComponentContext) => string;

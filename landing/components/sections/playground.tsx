@@ -20,12 +20,12 @@ const PRESET_SEEDS = [
 ];
 
 const DISPLAY_SLOTS: SlotName[] = [
-  "head",
   "eyes",
-  "eyebrows",
   "mouth",
   "facialHair",
+  "freckles",
   "glasses",
+  "hair",
 ];
 
 const RAND_WORDS = [

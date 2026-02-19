@@ -1,89 +1,38 @@
 import type { ComponentFn, ComponentSet } from "../types.js";
 
-// LEGO minifig eyes (128x128 viewBox):
-//
-// Official LEGO face proportions (from BrickNerd design analysis):
-//   - Eyes are 2 eye-widths apart
-//   - Post-2001 LEGO added white specular highlights inside the black dots
-//     to bring the eyes to life
-//
-// Eye centers: x=48 and x=80, y=55
-// Head body: x=19..109 (center=64, width=90)
-// Eyes placed at ~1/3 and ~2/3 of face width for authentic feel.
+const SCALE = 1;
+const CENTER_X = 128;
+
+function wrap(ctx: { slotPosition?: { x: number; y: number } }, w: number, h: number, inner: string): string {
+  const pos = ctx.slotPosition ?? { x: CENTER_X, y: 0 };
+  return `<g transform="translate(${pos.x - w / 2}, ${pos.y}) scale(${SCALE})">${inner}</g>`;
+}
 
 /** Classic Dots — the original 1978 two black dots. No highlights. */
-const classicDots: ComponentFn = () => {
-  return `<g id="eyes-classic-dots">
-    <circle cx="48" cy="55" r="3.5" fill="#1a1a1a"/>
-    <circle cx="80" cy="55" r="3.5" fill="#1a1a1a"/>
-  </g>`;
+const classicDots: ComponentFn = (ctx) => {
+  const inner = `<path d="M19.6364 9.81818C19.6364 15.2406 15.2406 19.6364 9.81818 19.6364C4.39575 19.6364 0 15.2406 0 9.81818C0 4.39575 4.39575 0 9.81818 0C15.2406 0 19.6364 4.39575 19.6364 9.81818Z" fill="black"/>
+<path d="M72 9.81818C72 15.2406 67.6043 19.6364 62.1818 19.6364C56.7594 19.6364 52.3636 15.2406 52.3636 9.81818C52.3636 4.39575 56.7594 0 62.1818 0C67.6043 0 72 4.39575 72 9.81818Z" fill="black"/>`;
+  return wrap(ctx, 72, 20, inner);
 };
 
 /** Modern Dots — Post-2001 style with white specular highlights. */
-const modernDots: ComponentFn = () => {
-  return `<g id="eyes-modern-dots">
-    <circle cx="48" cy="55" r="5" fill="#1a1a1a"/>
-    <circle cx="49.5" cy="53.5" r="1.5" fill="white" opacity="0.9"/>
-    <circle cx="80" cy="55" r="5" fill="#1a1a1a"/>
-    <circle cx="81.5" cy="53.5" r="1.5" fill="white" opacity="0.9"/>
-  </g>`;
+const happy: ComponentFn = (ctx) => {
+  const inner = `<path d="M19.6364 9.81818C19.6364 15.2406 15.2406 19.6364 9.81818 19.6364C4.39575 19.6364 0 15.2406 0 9.81818C0 4.39575 4.39575 0 9.81818 0C15.2406 0 19.6364 4.39575 19.6364 9.81818Z" fill="black"/>
+<path d="M19.6364 23.3182C19.6364 28.7406 15.2406 33.1364 9.81818 33.1364C4.39575 33.1364 0 28.7406 0 23.3182C0 17.8957 4.39575 13.5 9.81818 13.5C15.2406 13.5 19.6364 17.8957 19.6364 23.3182Z" fill="#FFDD15"/>
+<path d="M72 9.81818C72 15.2406 67.6043 19.6364 62.1818 19.6364C56.7594 19.6364 52.3636 15.2406 52.3636 9.81818C52.3636 4.39575 56.7594 0 62.1818 0C67.6043 0 72 4.39575 72 9.81818Z" fill="black"/>
+<path d="M72 23.3182C72 28.7406 67.6043 33.1364 62.1818 33.1364C56.7594 33.1364 52.3636 28.7406 52.3636 23.3182C52.3636 17.8957 56.7594 13.5 62.1818 13.5C67.6043 13.5 72 17.8957 72 23.3182Z" fill="#FFDD15"/>`;
+  return wrap(ctx, 72, 34, inner);
 };
 
-/** Oval — Tall oval eyes with highlights. Expressive, used on many themed minifigs. */
-const oval: ComponentFn = () => {
-  return `<g id="eyes-oval">
-    <ellipse cx="48" cy="55" rx="4" ry="5.5" fill="#1a1a1a"/>
-    <circle cx="49.5" cy="53" r="1.5" fill="white" opacity="0.9"/>
-    <ellipse cx="80" cy="55" rx="4" ry="5.5" fill="#1a1a1a"/>
-    <circle cx="81.5" cy="53" r="1.5" fill="white" opacity="0.9"/>
-  </g>`;
-};
-
-/** Sleepy — Half-closed, horizontal slits. Cool/tired look. */
-const sleepy: ComponentFn = () => {
-  return `<g id="eyes-sleepy">
-    <ellipse cx="48" cy="56" rx="5" ry="2.5" fill="#1a1a1a"/>
-    <ellipse cx="80" cy="56" rx="5" ry="2.5" fill="#1a1a1a"/>
-  </g>`;
-};
-
-/** Wide — Large round eyes with highlights. Surprised or cute look. */
-const wide: ComponentFn = () => {
-  return `<g id="eyes-wide">
-    <circle cx="48" cy="55" r="6.5" fill="#1a1a1a"/>
-    <circle cx="50" cy="53" r="2" fill="white" opacity="0.9"/>
-    <circle cx="80" cy="55" r="6.5" fill="#1a1a1a"/>
-    <circle cx="82" cy="53" r="2" fill="white" opacity="0.9"/>
-  </g>`;
-};
-
-/** Side Glance — Eyes looking to one side, a common LEGO licensed-figure print. */
-const sideGlance: ComponentFn = () => {
-  return `<g id="eyes-side-glance">
-    <ellipse cx="48" cy="55" rx="5" ry="5.5" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
-    <circle cx="50" cy="55" r="3" fill="#1a1a1a"/>
-    <circle cx="51" cy="54" r="1" fill="white" opacity="0.9"/>
-    <ellipse cx="80" cy="55" rx="5" ry="5.5" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
-    <circle cx="82" cy="55" r="3" fill="#1a1a1a"/>
-    <circle cx="83" cy="54" r="1" fill="white" opacity="0.9"/>
-  </g>`;
-};
-
-/** Wink — One open eye, one winking closed. Classic LEGO playful expression. */
-const wink: ComponentFn = () => {
-  return `<g id="eyes-wink">
-    <circle cx="48" cy="55" r="5" fill="#1a1a1a"/>
-    <circle cx="49.5" cy="53.5" r="1.5" fill="white" opacity="0.9"/>
-    <path d="M 75 56 Q 80 53 85 56" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
-  </g>`;
+/** Wink — One open eye, one winking closed. */
+const wink: ComponentFn = (ctx) => {
+  const inner = `<path d="M18.5806 9.29032C18.5806 14.4212 14.4212 18.5806 9.29032 18.5806C4.15942 18.5806 0 14.4212 0 9.29032C0 4.15942 4.15942 0 9.29032 0C14.4212 0 18.5806 4.15942 18.5806 9.29032Z" fill="black"/>
+<path d="M49.5483 12.387C58.316 4.36561 63.2325 3.89553 72 12.387" fill="none" stroke="black" stroke-width="5.41935" stroke-linecap="round"/>`;
+  return wrap(ctx, 75, 19, inner);
 };
 
 export const eyesVariants: ComponentSet = [
   classicDots,
-  modernDots,
-  oval,
-  sleepy,
-  wide,
-  sideGlance,
+  happy,
   wink,
 ];

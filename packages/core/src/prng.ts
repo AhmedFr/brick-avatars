@@ -1,23 +1,18 @@
 import { murmurhash3 } from "./hash.js";
 import type {
+  ColorPalette,
+  ComponentRegistry,
   SlotName,
   SlotSelections,
-  ComponentRegistry,
-  ColorPalette,
 } from "./types.js";
 
-const REQUIRED_SLOTS: Set<SlotName> = new Set([
-  "head",
-  "eyes",
-  "mouth",
-  "eyebrows",
-]);
+const REQUIRED_SLOTS: Set<SlotName> = new Set(["eyes", "mouth"]);
 
 const OPTIONAL_SLOT_PROBABILITY: Partial<Record<SlotName, number>> = {
   facialHair: 0.3,
   glasses: 0.25,
-  headAccessory: 0.35,
-  scarsMarks: 0.15,
+  hair: 0.5,
+  freckles: 0.3,
 };
 
 export function selectSlots(
@@ -44,19 +39,9 @@ export function selectSlots(
   return selections;
 }
 
-const SKIN_TONES = ["#f9de4e"];
+const SKIN_TONES = ["#FFDD15"];
 
-const HAIR_COLORS = [
-  "#2C1B0E",
-  "#4A2912",
-  "#8B5E3C",
-  "#C47A2B",
-  "#E8C46A",
-  "#D94F30",
-  "#A0A0A0",
-  "#3B82F6",
-  "#A855F7",
-];
+const HAIR_COLORS = ["#000000", "#FF0009", "#844D26"];
 
 const ACCENT_COLORS = [
   "#EF4444",

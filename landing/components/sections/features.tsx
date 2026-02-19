@@ -23,7 +23,7 @@ const FEATURES: Feature[] = [
     badge: "Format",
     title: "SVG-First",
     description:
-      "Pure SVG output with a 128\u00D7128 viewBox. Scales to any resolution with zero pixelation. Embed inline, use in an <img>, or serve as a file.",
+      "Pure SVG output with a 256\u00D7256 viewBox. Scales to any resolution with zero pixelation. Embed inline, use in an <img>, or serve as a file.",
   },
   {
     Icon: Zap,
@@ -37,14 +37,14 @@ const FEATURES: Feature[] = [
     badge: "Architecture",
     title: "Modular Slots",
     description:
-      "Head, eyes, eyebrows, mouth — each slot is independently hashed. Adding new variants never changes existing avatars. Extend with your own components.",
+      "Eyes and mouth are always on; optional hair, facial hair, glasses, and freckles. Each slot is independently hashed. Adding new variants never changes existing avatars. Extend with your own components.",
   },
   {
     Icon: Sparkles,
     badge: "Variety",
-    title: "450+ Combinations",
+    title: "Hundreds of combinations",
     description:
-      "3 heads \u00D7 5 eyes \u00D7 5 eyebrows \u00D7 6 mouths \u00D7 9 hair colors \u00D7 8 accent colors. Every combination feels distinct and recognizable.",
+      "3 eyes \u00D7 7 mouths \u00D7 3 hair colors, plus optional hair, facial hair, glasses, and freckles. Every combination feels distinct and recognizable.",
   },
   {
     Icon: Globe,
